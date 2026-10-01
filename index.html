@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#073B82" />
+  <meta name="description" content="Roleta de prêmios da Rede Certo." />
+  <title>Roleta de Prêmios | Postos Certo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="brand-card"><img class="brand-logo" src="assets/logo-posto-certo.jpg" alt="Logo Postos Certo" /></div>
+      <div class="hero-copy">
+        <span class="eyebrow">Programa de Prêmios</span>
+        <h1>Gire e descubra seu prêmio!</h1>
+        <p>Toque no botão abaixo e veja o que a sorte reservou para você.</p>
+      </div>
+    </section>
+
+    <section class="wheel-card">
+      <div class="wheel-topline">
+        <div><span class="section-kicker">Boa sorte!</span><h2>Roleta Premiada</h2></div>
+        <div class="mini-badge">🎁</div>
+      </div>
+
+      <div class="wheel-wrap">
+        <div class="pointer"></div>
+        <canvas id="wheel" width="760" height="760" aria-label="Roleta com seis opções de prêmio"></canvas>
+        <div class="wheel-center"><span>★</span></div>
+      </div>
+
+      <button id="spinButton" class="spin-button" type="button"><span>↻</span><span id="spinButtonText">Girar roleta</span></button>
+      <p class="helper-text">Um toque é suficiente. Aguarde a roleta parar para ver o resultado.</p>
+    </section>
+
+    <section class="prizes-card">
+      <span class="section-kicker">Você pode ganhar</span>
+      <h2>Prêmios da roleta</h2>
+      <div class="prize-grid">
+        <div class="prize-pill"><span>🍦</span>Picolé</div>
+        <div class="prize-pill"><span>💧</span>Água mineral</div>
+        <div class="prize-pill"><span>☕</span>Café</div>
+        <div class="prize-pill"><span>🧃</span>Suco</div>
+        <div class="prize-pill"><span>🍬</span>Doce</div>
+        <div class="prize-pill"><span>🔄</span>Tente mais uma vez</div>
+      </div>
+    </section>
+
+    <footer>POSTOS CERTO • Programa de Prêmios</footer>
+  </main>
+
+  <div id="resultModal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+      <div id="resultIcon" class="result-icon">🎉</div>
+      <span id="resultEyebrow" class="modal-eyebrow">Parabéns!</span>
+      <h2 id="resultTitle">Você ganhou</h2>
+      <p id="resultPrize" class="result-prize">Café</p>
+      <p id="resultMessage" class="result-message">Apresente esta tela ao atendente para resgatar seu prêmio.</p>
+      <button id="modalActionButton" class="modal-action" type="button">Entendi</button>
+    </div>
+  </div>
+
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+  <script src="js/roleta.js"></script>
+</body>
+</html>
